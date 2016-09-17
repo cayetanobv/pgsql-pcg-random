@@ -1,0 +1,5 @@
+# pcg_random extension
+comment = 'pgsql-pcg-random'
+default_version = '0.0.1'
+relocatable = true
+module_pathname = '$libdir/pcg_random'
