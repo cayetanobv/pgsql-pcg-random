@@ -23,12 +23,12 @@
 
 \echo Use "CREATE EXTENSION pcg_random" to load this file. \quit
 
-CREATE FUNCTION pcg_random(integer)
+CREATE FUNCTION pcg_random(integer DEFAULT 0)
 RETURNS integer
 AS 'MODULE_PATHNAME'
 LANGUAGE C IMMUTABLE STRICT;
 
-CREATE FUNCTION pcg_random_bound(integer, integer)
+CREATE FUNCTION pcg_random_bound(integer, integer DEFAULT 0)
 RETURNS integer
 AS 'MODULE_PATHNAME'
 LANGUAGE C IMMUTABLE STRICT;

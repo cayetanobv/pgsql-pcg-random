@@ -64,8 +64,8 @@ pcg_random_bound(PG_FUNCTION_ARGS)
     uint32_t result;
     pcg32_random_t rng;
 
-    seedinitseq = PG_GETARG_INT32(0);
-    bound = PG_GETARG_INT32(1);
+    bound = PG_GETARG_INT32(0);
+    seedinitseq = PG_GETARG_INT32(1);
 
     pcg32_srandom_r(&rng, time(NULL) ^ (intptr_t)&printf,(intptr_t)&seedinitseq);
 
