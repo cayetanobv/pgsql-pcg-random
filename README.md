@@ -12,17 +12,18 @@ CREATE EXTENSION
 - Use the extension functions:
 
 ```sql
-postgres@[local] ~>SELECT pcg_random(0);
+postgres@[local] ~>select pcg_random();
  pcg_random
 ------------
- -900850644
+  791006829
 (1 row)
 
-postgres@[local] ~>SELECT pcg_random_bound(0,100);
+postgres@[local] ~>select pcg_random_bound(100);
  pcg_random_bound
 ------------------
-               95
+               25
 (1 row)
+
 ```
 
 ## More info
